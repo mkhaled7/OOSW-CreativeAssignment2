@@ -5,7 +5,7 @@ import view.Paint;
 
 public class ButtonListener implements ActionListener {
 
-	public Paint panel;
+	public Paint panel; //Paint object called panel
 
 	public ButtonListener(Paint panel){
 		this.panel = panel;

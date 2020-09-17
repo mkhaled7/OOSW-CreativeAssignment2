@@ -8,7 +8,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JComponent;
 
-public class DrawArea extends JComponent {
+//JComponent is an abstract class for all Swing components; a basic object that can be drawn
+//JPanel is simple usable component that can be used for almost anything
+
+public class DrawArea extends JComponent { 
  
   private Image image; 
   
@@ -19,7 +22,7 @@ public class DrawArea extends JComponent {
   public DrawArea() { //constructor
     
     addMouseListener(new MouseAdapter() {
-      public void mousePressed(MouseEvent e) {
+      public void mousePressed(MouseEvent e) { //mouse PRESSED
         
         oldX = e.getX(); // save x,y coordinates when mouse is pressed
         oldY = e.getY();
@@ -27,7 +30,7 @@ public class DrawArea extends JComponent {
     });
  
     addMouseMotionListener(new MouseMotionAdapter() {
-      public void mouseDragged(MouseEvent e) {
+      public void mouseDragged(MouseEvent e) { //mouse DRAGGED
         
         currentX = e.getX();  //recoreds coordinate when mouse is dragged
         currentY = e.getY();
@@ -46,24 +49,24 @@ public class DrawArea extends JComponent {
   }
  
   public void paintComponent(Graphics g) {
-    if (image == null) { //when its null we can draw
+    if (image == null) { //if null, we can draw
       
-      image = createImage(getSize().width, getSize().height);
+      image = createImage(getSize().width, getSize().height); //getSize() returns the size of the component
       g2 = (Graphics2D) image.getGraphics();
      
       clear();
     }
  
-    g.drawImage(image, 0, 0, null);
+    g.drawImage(image, 0, 0, null); //draws image at coordinate: x,y and observer parameter is null
   }
  
-  // methods
-  public void clear() {
+       // methods
+  public void clear() { //this method clears the screen when Clear Screen button is pressed
 	
     g2.setColor(Color.white); //paint the image white
-    g2.fillRect(0, 0, getSize().width, getSize().height);
+    g2.fillRect(0, 0, getSize().width, getSize().height); //draw an ampty white rectangle the size of dimension object
     g2.setColor(Color.black); //default paint color is BLACK
-    repaint();
+    repaint(); //basically refresh
   }
  
   public void red() {

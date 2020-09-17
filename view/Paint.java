@@ -8,23 +8,23 @@ import javax.swing.JPanel;
 import controller.ButtonListener;
  
 public class Paint {
- 
+  //buttons to clear screen and change color
   private JButton clearButton = new JButton("Clear Screen");
   private JButton blackButton = new JButton("Black");
   private JButton blueButton = new JButton("Blue");
   private JButton greenButton = new JButton("Green");
   private JButton redButton = new JButton("Red");
 
-  public DrawArea drawArea;
+  public DrawArea drawArea; //must be public so its visible in ButtonListener
  
   public void view() {
     
-    JFrame window = new JFrame("Paint App");
+    JFrame window = new JFrame("PaintApp");
     Container cp = window.getContentPane();
     cp.setLayout(new BorderLayout());
-    drawArea = new DrawArea();
+    drawArea = new DrawArea();  //create a new DrawArea object and add it to the content pane
     cp.add(BorderLayout.CENTER, drawArea);
-    JPanel panel = new JPanel();
+    JPanel panel = new JPanel(); //create a new panel
 
 	// add buttons to the panel
   	panel.add(blackButton);
@@ -47,7 +47,8 @@ public class Paint {
     greenButton.addActionListener(listener);
     redButton.addActionListener(listener);
   }
-
+ 
+  //getter methods
   public JButton getClearButton(){
 	  return clearButton;
   }
