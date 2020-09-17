@@ -15,7 +15,7 @@ public class Paint {
   private JButton greenButton = new JButton("Green");
   private JButton redButton = new JButton("Red");
 
-  public DrawArea drawArea; //must be public so its visible in ButtonListener
+  public DrawArea drawArea;  //must be public so its visible in ButtonListener
  
   public void view() {
     
@@ -26,7 +26,7 @@ public class Paint {
     cp.add(BorderLayout.CENTER, drawArea);
     JPanel panel = new JPanel(); //create a new panel
 
-	// add buttons to the panel
+	 // add all buttons to the panel
   	panel.add(blackButton);
     panel.add(greenButton);
     panel.add(blueButton);
@@ -48,7 +48,7 @@ public class Paint {
     redButton.addActionListener(listener);
   }
  
-  //getter methods
+  //getter methods for all buttons
   public JButton getClearButton(){
 	  return clearButton;
   }

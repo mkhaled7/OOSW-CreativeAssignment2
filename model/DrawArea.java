@@ -1,4 +1,5 @@
 package model;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -7,11 +8,15 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JComponent;
+import javax.swing.JPanel;
 
-//JComponent is an abstract class for all Swing components; a basic object that can be drawn
-//JPanel is simple usable component that can be used for almost anything
+//JComponent: is an abstract class for all Swing components; a basic object that can be drawn
+//It is abstract, so we cannot create an instance of it.
+//JPanel: is simple usable component that can be used for almost anything
+//Lightweight general-purpose container
+//JPanel is a class, so we can create instances of it; useful for grouping components together
 
-public class DrawArea extends JComponent { 
+public class DrawArea extends JComponent {  //JPanel also works instead of JComponent
  
   private Image image; 
   
