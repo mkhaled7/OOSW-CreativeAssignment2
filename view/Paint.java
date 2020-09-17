@@ -1,15 +1,10 @@
 package view;
-
 import model.DrawArea;
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import controller.ButtonListener;
  
 public class Paint {
@@ -20,25 +15,7 @@ public class Paint {
   private JButton greenButton = new JButton("Green");
   private JButton redButton = new JButton("Red");
 
-  DrawArea drawArea;
-/*
-  ActionListener actionListener = new ActionListener() { 
- 
-  public void actionPerformed(ActionEvent e) {
-      if (e.getSource() == clearButton) {
-        drawArea.clear();
-      } else if (e.getSource() == blackButton) {
-        drawArea.black();
-      } else if (e.getSource() == blueButton) {
-        drawArea.blue();
-      } else if (e.getSource() == greenButton) {
-        drawArea.green();
-      } else if (e.getSource() == redButton) {
-        drawArea.red();
-      } 
-    }
-  };
- */
+  public DrawArea drawArea;
  
   public void view() {
     
@@ -63,17 +40,14 @@ public class Paint {
   	window.setVisible(true);
 	
 	//add action listeners to the buttons
-
 	  final ButtonListener listener = new ButtonListener(this);
     clearButton.addActionListener(listener);
     blackButton.addActionListener(listener);
     blueButton.addActionListener(listener);
     greenButton.addActionListener(listener);
     redButton.addActionListener(listener);
- 
   }
 
-  
   public JButton getClearButton(){
 	  return clearButton;
   }

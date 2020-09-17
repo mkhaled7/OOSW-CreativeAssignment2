@@ -7,15 +7,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JComponent;
- 
-//REFERENCES used:
-/*
-https://www.programcreek.com/java-api-examples/?class=java.awt.Component&method=createImage
-https://stackoverflow.com/questions/9445182/drawimage-doesnt-draw/9445499
-https://www.codota.com/code/java/methods/java.awt.Graphics/drawImage
-https://stackoverflow.com/questions/20170641/creating-a-custom-method-to-draw-graphics-2d-g2-is-null
-*/
-
 
 public class DrawArea extends JComponent {
  
@@ -90,5 +81,4 @@ public class DrawArea extends JComponent {
   public void blue() {
     g2.setColor(Color.blue);
   }
- 
 }
