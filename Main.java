@@ -1,13 +1,4 @@
-import view.Paint;
-
-public class Main {
-
-	public static void main(String[] args){
-
-		Paint paint = new Paint();
-		paint.view();
-	}
-}
+//Creative Assignment 2 (OOSW) - M.Khaled
 
 /*REFERENCES and acknowledgemnets:
 Thanks to my friend, Shelby Koch, who helped find a bug with my button listeners
@@ -19,3 +10,10 @@ https://www.codota.com/code/java/methods/java.awt.Graphics/drawImage
 https://stackoverflow.com/questions/20170641/creating-a-custom-method-to-draw-graphics-2d-g2-is-null
 ,etc
 */
+import view.Paint;
+public class Main {
+	public static void main(String[] args){
+		Paint paint = new Paint();
+		paint.view();
+	}
+}
